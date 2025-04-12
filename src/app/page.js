@@ -9,6 +9,9 @@ import { FaRegPaperPlane } from "react-icons/fa";
 import { FaQuoteLeft } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa6";
 import { MdOutlineMail } from "react-icons/md";
+import { FiShoppingCart } from "react-icons/fi";
+import { FaImages } from "react-icons/fa";
+import { IoFileTraySharp } from "react-icons/io5";
 
 
 
@@ -113,8 +116,20 @@ export default function Home() {
  
  
   return (
-    <div className="text-black overflow-hidden">
-      <div className="w-full h-screen z-30 bg-cover bg-center bg-no-repeat pt-3 overflow-hidden" style={{ backgroundImage: "url('/bgbg.webp')" }}>
+    <div className="text-black overflow-hidden relative">
+     <div className="fixed top-60 right-0 flex flex-col items-center z-50">
+        <div className="bg-blue-950 h-[50px] w-[50px] p-4 text-center mb-1 cursor-pointer text-white">
+          <FiShoppingCart  size={20}/>
+        </div>
+        <div className="bg-blue-950 h-[50px] w-[50px] p-4 text-center mb-1 text-white cursor-pointer">
+          <IoFileTraySharp size={20}/>
+        </div>
+        <div className="bg-blue-950 h-[50px] w-[50px] p-4 text-center mb-1 text-white cursor-pointer">
+          <FaImages size={20}/>
+        </div>
+      </div>
+
+      <div className=" w-full h-screen bg-cover bg-center bg-no-repeat pt-3 overflow-hidden" style={{ backgroundImage: "url('/bgbg.webp')",zIndex: 1, }}>
           <div className=" px-[55px] flex justify-between  items-center">
             <div className="flex gap-[30px] text-white font-bold items-center">
               <Image 
